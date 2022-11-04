@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, must_be_immutable
-import 'package:contact_list_zuri_task_6/models/contact.dart';
+// ignore_for_file: prefer_const_constructors, must_be_immutable;
+import 'models/contact.dart';
 import 'package:flutter/material.dart';
+
 
 class ContactList extends StatelessWidget {
   Contact contact;
@@ -79,27 +80,6 @@ class ContactList extends StatelessWidget {
         SizedBox(
           height: 5.0,
         ),
-        Row(
-          children: [
-            Text('Address: ',
-                style: TextStyle(
-                    letterSpacing: 2.0,
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.bold)),
-            SizedBox(
-              width: 10.0,
-            ),
-            Text(text.address.toString(),
-                style: TextStyle(
-                    color: Colors.blueGrey[500],
-                    letterSpacing: 2.0,
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.bold))
-          ],
-        ),
-        SizedBox(
-          height: 5.0,
-        )
       ]),
     ));
   }
