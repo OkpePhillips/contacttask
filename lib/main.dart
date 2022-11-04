@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 void main() {
   Contact mockContact = MockContact.fetchAll();
   return runApp(MaterialApp(
-    theme: ThemeData(fontFamily: 'Pacifico'),
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(fontFamily: 'RobotoMono'),
     home: ContactList(mockContact),
   ));
 }

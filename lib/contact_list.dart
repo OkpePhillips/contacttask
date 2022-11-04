@@ -12,17 +12,16 @@ class ContactList extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          title: const Text('Contact List (Week 6)'),
-          centerTitle: true,
-          backgroundColor: Colors.pinkAccent[200],
+          title: const Text('My Contact'),
+          backgroundColor: Colors.blue,
         ),
         body: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: _renderFacts(contact)));
+            children: _displayContacts(contact)));
   }
 
-  List<Widget> _renderFacts(Contact contact) {
+  List<Widget> _displayContacts(Contact contact) {
     var result = <Widget>[];
 
     for (int i = 0; i < contact.contacts!.length; i++) {
@@ -34,25 +33,25 @@ class ContactList extends StatelessWidget {
   Widget _sectionTitle(text) {
     return SingleChildScrollView(
         child: Padding(
-      padding: EdgeInsets.fromLTRB(15, 20, 10, 0),
+      padding: EdgeInsets.fromLTRB(5, 10, 10, 0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Center(
           child: CircleAvatar(
             backgroundImage: AssetImage(text.image.toString()),
-            radius: 35.0,
+            radius: 25.0,
           ),
         ),
         SizedBox(
           height: 5.0,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(text.name.toString(),
                 style: TextStyle(
-                    color: Colors.blueGrey[500],
-                    letterSpacing: 2.0,
-                    fontSize: 17.0,
+                    color: Colors.black,
+                    letterSpacing: 1.0,
+                    fontSize: 15.0,
                     fontWeight: FontWeight.bold))
           ],
         ),
@@ -71,14 +70,14 @@ class ContactList extends StatelessWidget {
             ),
             Text(text.phoneNumber.toString(),
                 style: TextStyle(
-                    color: Colors.blueGrey[500],
+                    color: Colors.black,
                     letterSpacing: 2.0,
                     fontSize: 17.0,
                     fontWeight: FontWeight.bold))
           ],
         ),
         SizedBox(
-          height: 5.0,
+          height: 2.0,
         ),
       ]),
     ));
